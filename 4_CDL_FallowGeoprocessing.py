@@ -1,6 +1,6 @@
 # 4_CDL_FallowGeoprocessing.py
 # Created on: 2019-04-26
-# From Madison Wilson
+# From Madison Wilson, Kevin Neal, Sophie Plassin
 # Description: Quantifying fallow/idle and cropland spatial extent and frequencies
 #       from 2008 - 2018 using the USDA NASS's Cropland Data Layer.
 # --------------------------------------------------------------------------------
