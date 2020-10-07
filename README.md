@@ -8,6 +8,11 @@ Data processing:
 *3_ProjectUSCensusStates.py
 *4_CDL_FallowGeoprocessing.py
 
+Data analysis: 
+*5_Area_Percentage_Fallow_Crop.R 
+*6_Area_Post_Fallow.R
+
+
 *1_CDL_Preprocessing.py generates gridded annual maps of land-use from the U.S. Department of Agriculture's Cropland Data Layer (CDL).
 The output dataset (rasters) has the extent of the Rio Grande SES at a 30 m resolution for the 11-year period of 2008-2018.
 The input dataset – CDL annual time series for the states of Colorado, New Mexico and Texas - are downloadable as raster-based GeoTIFF files from the web application CropScape: https://nassgeodata.gmu.edu/CropScape/. 
@@ -21,4 +26,11 @@ The input dataset – 2018 TIGER/Line® Shapefiles States (and equivalent) for t
 
 *4_CDL_FallowGeoprocessing.py generates a time-series that reports the sequences of land-use for all pixels contained within the mask of the maximum agricultural areal extent (areas that has been at least one time cropland or fallow land during the 11-year period of 2008-2018).
 The script runs with three input dataset – the CDL gridded annual maps for the 11-year period of 2008-2018, the ecoregions and states boundaries – which are derived from steps 1, 2 and 3.
+
+*5_Area_Percentage_Fallow_Crop.R calculates the area in cropland and fallow land and the percentage of fallow land in the maximum agricultural areal extent for the time series (2008-2018).
+The script runs with the CSV files starting with "crop_eco" and "crop_state", derived from step 4.
+
+*6_Area_Post_Fallow.R estimates the cumulative area of each land-use following fallow over the entire time-series.
+The script runs with the CSV files starting with "fallowcrops", derived from step 4.
+
 
